@@ -1,0 +1,14 @@
+<div class="mt-4" style="height: 700px;">
+    <div class="row">
+        <div class="col-4">
+            <img [src]="product.image" width="350px" height="350px">
+        </div>
+        <div class="col">
+            <h2>{{product.title}}</h2>
+            <p>{{product.rating.rate}} <span class="bi bi-star-fill"></span> <span> || {{product.rating.count}} reviews</span></p>
+            <button type="button" class="btn btn-danger mb-2" style="height: min-content;">Limited Time Deal</button>
+            <h4>{{product.price | currency:'USD'}}</h4>
+            <hr> 
+        </div>
+    </div>
+</div>

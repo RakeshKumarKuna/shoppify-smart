@@ -1,0 +1,45 @@
+<div style="width:1260px;">
+  <div class="d-flex justify-content-around mt-2 btn btn-group">
+    <button class="btn btn-info"><a routerLink="home"><span class="bi bi-house-fill"> </span>Home</a></button>
+    <button class="btn btn-info"><a routerLink="men/men's clothing">Mens</a></button>
+    <button class="btn btn-info"><a routerLink="women/women's clothing">Womens</a></button>
+    <button class="btn btn-info"><a routerLink="Ele/electronics">Electronics</a></button>
+    <button class="btn btn-info"><a routerLink="kids/jewelery">Jewelery</a></button>
+    <button class="btn btn-info"><a routerLink="beauty">Beauty</a></button>
+    <button class="btn btn-info"> <span class="bi bi-heart-fill" style="font-size:large;color: red;"></span></button>
+    <button class="btn btn-info"><a routerLink="cartitems"><span class="bi bi-cart-check-fill"
+          style="color: brown;">[{{len}}]</span></a></button>
+    <button class="btn btn-info"><a routerLink="register"><span class="bi bi-person-circle"></span></a></button>
+    <button (click)="signing($event)" class="btn btn-info">LogOut</button>
+  </div>
+  
+  <router-outlet></router-outlet>
+  <div>
+    <footer class="row bg-black text-white mt-2 pt-4" style="height:350px;">
+      <div class="col-3">
+        <h3>Get to know us</h3>
+        <div id="first">About Us</div>
+        <div id="first">Carrears</div>
+        <div id="first">Press Realse</div>
+      </div>
+      <div class="col-3">
+        <h3>Connect with us</h3>
+        <div id="second"><span style="color: blue;" class="bi bi-facebook">&nbsp; </span>FaceBook</div>
+        <div id="second"><span style="color: lightpink;" class="bi bi-instagram">&nbsp; </span> Instagram</div>
+        <div id="second"><span style="color: blue;" class="bi bi-twitter">&nbsp; </span> Twitter</div>
+      </div>
+      <div class="col-3">
+        <h3>Make Money With Us</h3>
+        <div id="third">Protect and Build Your Brand</div>
+        <div id="third">Become an Affiliate</div>
+        <div id="third">Advertise Your Products</div>
+      </div>
+      <div class="col-3">
+        <h3>Let Us Help You</h3>
+        <div id="four"><span class="bi bi-person-fill"></span>Your Account</div>
+        <div id="four">Returns Centre</div>
+        <div id="four">100% Purchase Protection</div>
+      </div>
+    </footer>
+  </div>
+</div>

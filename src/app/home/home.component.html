@@ -1,0 +1,38 @@
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="assets/menswearbanner1.png" class="d-block w-100" alt="banner1">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="assets/menswearbanner2.png" class="d-block w-100" alt="banner2">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="assets/menswearbanner3.png" class="d-block w-100" alt="banner3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="mt-2 d-flex flex-wrap overflow-auto page">
+  <div class="card d-flex justify-content-center align-items-center m-1" *ngFor="let item of products ; let i=index"
+    style=" width: 15rem;">
+    <a routerLink="/fulldetailes/{{item.id}}"><img class="rounded float-start" class="mt-1" [src]="item.image" [alt]="item.title" width="120"
+        height="120"></a>
+    <div class="card-body">
+      <h5 class="card-title titile" style="height:30px; display: flex; flex-wrap: wrap;overflow: hidden;">{{item.title}}
+      </h5>
+      <p class="card-text">&#x24; {{item.price}}</p>
+      <p>{{item.rating.rate}} &nbsp; <span class="bi bi-star-fill"> </span></p>
+      <button (click)="addcart(item)" class="btn btn-primary"><a>Add to Cart <span
+            class="bi bi-cart-check"></span></a></button>
+      <button [ngClass]="{whishlistred:counter&&index==i}" (click)="colorchange(i)" type="button" class="ms-4 btn"><span
+          class="bi bi-heart-fill"></span></button>
+    </div>
+  </div>
+</div>

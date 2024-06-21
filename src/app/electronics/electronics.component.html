@@ -1,0 +1,14 @@
+
+<div class="mt-2 d-flex flex-wrap overflow-auto ">
+    <div class="card d-flex justify-content-center align-items-center m-1" *ngFor="let item of products ; let i=index"
+      style=" width: 15rem;">
+      <a routerLink="/fulldetailes/{{item.id}}"><img [src]="item.image" [alt]="item.title" width="120" height="120"></a>
+      <div class="card-body">
+        <h5 class="card-title titile" style="height:30px; display: flex; flex-wrap: wrap;overflow: hidden;">{{item.title}}
+        </h5>
+        <p class="card-text">&#x24; {{item.price}}</p>
+        <p>{{item.rating.rate}}<span class="bi bi-star-fill"></span></p>
+        <button (click)="addcart(item)" class="btn btn-primary"><a>Add to Cart <span class="bi bi-cart-check"></span></a></button>
+      </div>
+    </div>
+  </div>

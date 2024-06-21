@@ -1,0 +1,15 @@
+<div style="height: 550px;" class="mt-3">
+    <h1 class="text-center">Login</h1>
+<div class="d-flex justify-content-center box">
+    
+    <form #frmregister="ngForm" class="w-50"  (ngSubmit)="checklogin(frmregister)">
+        <dl>
+            <dt>UserName</dt>
+            <dd><input type="text" class="form-control" ngModel name="UserName" #UserName="ngModel"> </dd>
+            <dt>Password</dt>
+            <dd><input type="password" class="form-control" ngModel name="Password" #Password="ngModel"> </dd>
+        </dl>
+        <button type="submit" class="btn btn-primary w-100" (click)="login()">Login</button>
+    </form>
+</div>
+</div>
